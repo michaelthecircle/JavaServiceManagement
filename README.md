@@ -2,9 +2,9 @@
 
 Сервис менеджер по типу RESTfull, на базе `Spring Boot`.
 
-Сервис управляет правилами фильтрации ('https://github.com/michaelthecircle/JavaServiceFiltering'), 
-дедубликации ('https://github.com/michaelthecircle/JavaServiceDeduplication'),
-обогащения ('https://github.com/michaelthecircle/JavaServiceEnrichment').
+Сервис управляет правилами фильтрации https://github.com/michaelthecircle/JavaServiceFiltering, 
+дедубликации https://github.com/michaelthecircle/JavaServiceDeduplication,
+обогащения https://github.com/michaelthecircle/JavaServiceEnrichment.
 Пользователь через `Swagger` (`OpenApi`) имеет возможность получать всю информацию по правилам, добавлять новые правила и удалять правила из базы данных `PostgreSQL`.
 Таким образом сервис менеджера имеет подключение к каждой из таблиц сервисов фильтрации, дедубликации и обогащения в `PostgreSQL`.
 <p>Сервис имеет валидацию входных данных.
