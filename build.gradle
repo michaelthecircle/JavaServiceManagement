@@ -13,6 +13,11 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    archiveBaseName = rootProject.name
+    archiveVersion =  ''
+}
+
 dependencies {
 
     //spring boot
@@ -20,6 +25,9 @@ dependencies {
 
     //spring boot thymeleaf template
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.5'
+
+    //spring boot actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:3.2.5'
 
     //open api, swagger
     implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
@@ -31,32 +39,25 @@ dependencies {
     //spring jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.5'
 
-    //actuator
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
-
     // logging
     implementation 'ch.qos.logback:logback-classic:1.4.5'
 
     // code generator
-    compileOnly 'org.projectlombok:lombok:1.18.26'
-    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
     // databases
-    implementation 'org.postgresql:postgresql:42.7.2'
+    implementation 'org.postgresql:postgresql:42.5.4'
     implementation 'com.zaxxer:HikariCP:5.0.1'
-    implementation 'org.jooq:jooq:3.17.8'
-
-    // json
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
+    implementation 'org.jooq:jooq:3.19.1'
 
     // test
     testImplementation 'org.testcontainers:testcontainers:1.17.6'
     testImplementation "org.testcontainers:junit-jupiter:1.17.6"
     testImplementation "org.testcontainers:postgresql:1.17.6"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
-    testCompileOnly "org.projectlombok:lombok:1.18.26"
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testCompileOnly "org.projectlombok:lombok:1.18.32"
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
